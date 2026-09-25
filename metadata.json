@@ -1,0 +1,6 @@
+{
+  "name": "Multi-Hazard Disaster DSS",
+  "description": "Government-grade decision-support system converting multi-hazard intelligence into habitation-level risk prioritization, safe-site screening, capacity-constrained relocation optimization, and tracking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
