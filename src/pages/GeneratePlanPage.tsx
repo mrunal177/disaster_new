@@ -71,7 +71,7 @@ export const GeneratePlanPage: React.FC<GeneratePlanPageProps> = ({
     'AHP Risk Synthesis & SoVI Vulnerability Assessment (Parallel Evaluation)...',
     'Safety Gate Screening: WASH SPHERE Compliance & Slope Stability...',
     'Capacity Agent: Humanitarian 15% Buffer Reservation Ledger...',
-    'CP-SAT / MILP Branch-and-Bound Integer Relocation Optimizer...',
+    'Priority-Weighted Multi-Factor Allocation Optimizer (Phase-2 MILP Target)...',
     'Independent Verification Auditor: Zero-Overrun & Distance Verification...'
   ];
 

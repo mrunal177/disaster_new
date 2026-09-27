@@ -497,7 +497,7 @@ export const AuthorityDashboardPage: React.FC<AuthorityDashboardPageProps> = ({
               </h3>
             </div>
             <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-indigo-50 text-indigo-700 border border-indigo-200">
-              Tool-Calling RAG
+              Intent-Routed & Tool-Grounded RAG
             </span>
           </div>
 

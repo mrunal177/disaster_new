@@ -174,8 +174,8 @@ export class Orchestrator {
       };
     });
 
-    // 2. RELOCATION PLANNING (MILP / CP-SAT Solver)
-    this.notifyStage('RELOCATION_PLANNING_MIP', 'RelocationPlanningAgent', 'Formulating CP-SAT Integer Programming model with capacity constraints');
+    // 2. RELOCATION PLANNING (Priority-Weighted Allocation Heuristic)
+    this.notifyStage('RELOCATION_PLANNING_MIP', 'RelocationPlanningAgent', 'Executing Priority-Weighted Allocation Heuristic with capacity constraints (Phase-2 MILP Target)');
     
     let currentParameters = { ...parameters };
     let planResult: GeneratedPlanResult | null = null;
@@ -269,7 +269,7 @@ export class Orchestrator {
       action: isLive ? 'LIVE_PLAN_OPTIMIZED' : 'SIMULATION_SCENARIO_EVALUATED',
       user: 'Multi-Agent Orchestrator',
       entity: planResult.planId,
-      details: `${planResult.assignments.length} habitations allocated (${planResult.assignedPopulation?.toLocaleString()} residents). Verification passed with 0 violations. Solver: CP-SAT Branch-and-Bound.`
+      details: `${planResult.assignments.length} habitations allocated (${planResult.assignedPopulation?.toLocaleString()} residents). Verification passed with 0 violations. Engine: Priority-Weighted Allocation Heuristic v1.`
     };
 
     return {

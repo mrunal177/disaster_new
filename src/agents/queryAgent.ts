@@ -31,11 +31,13 @@ export interface QueryAgentResponse {
 }
 
 /**
- * AI-Assisted Query & RAG Agent
- * Scoped strictly to the application dataset using tool-calling.
+ * AI-Assisted Query & RAG Agent (Intent-Routed & Tool-Grounded)
+ * Scoped strictly to the application dataset using verified tool functions.
+ * Employs deterministic intent routing to fetch ground-truth database records
+ * before feeding results into synthesis with output entity verification.
  * STRICT GUARDRAILS:
  * 1. Model may ONLY answer questions using verified data returned by tool calls.
- * 2. Any response naming a habitation that was NOT returned by a tool call is strictly rejected.
+ * 2. Anti-Hallucination Guardrail: Any response naming a habitation NOT returned by an active tool query is strictly rejected.
  * 3. May NEVER set or mutate riskScore, priorityWindow, or assignedSiteId.
  */
 export class QueryAgent {

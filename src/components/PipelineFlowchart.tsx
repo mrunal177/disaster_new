@@ -70,8 +70,8 @@ export const PipelineFlowchart: React.FC<PipelineFlowchartProps> = ({
     },
     {
       id: 'planning_mip',
-      label: 'CP-SAT / MILP Planner',
-      sublabel: 'Exact Branch-and-Bound',
+      label: 'Allocation Planner',
+      sublabel: 'Cost-Ranked Greedy (Phase-2 MILP)',
       type: 'deterministic',
       icon: Activity,
       active: currentStage === 'RELOCATION_PLANNING_MIP',
@@ -173,7 +173,7 @@ export const PipelineFlowchart: React.FC<PipelineFlowchartProps> = ({
                   ) : (
                     <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-blue-50 text-blue-700 border border-blue-200 flex items-center gap-1">
                       <Lock className="w-2.5 h-2.5" />
-                      Math/CP
+                      Deterministic
                     </span>
                   )}
                 </div>

@@ -58,13 +58,11 @@ export function calculateGeodesicDistanceKm(
 }
 
 /**
- * Deterministic CP-SAT / MILP Branch-and-Bound Solver for Relocation Assignment
- * Minimizes weighted transit distance + vulnerability delay penalty
- * Subject to:
- * 1. Single site assignment per habitation (community coherence)
- * 2. Strict capacity bound: sum(pop_i) <= availableCapacity_j
- * 3. Distance bound: dist_ij <= maxDistanceKm
- * 4. Safety threshold: site must be safe candidate
+ * Priority-Weighted Multi-Factor Greedy Allocation Heuristic
+ * Assigns habitations in descending order of AHP risk score to lowest-cost eligible safe sites.
+ * Evaluates transit distance, site suitability, medical-proximity penalties, and capacity buffer constraints.
+ * Includes relaxed-distance fallback and emergency temporary shelter deficit tracking.
+ * (Note: Exact global MILP / CP-SAT solver with OR-Tools planned for Phase-2 Python service).
  */
 export function solveRelocationMip(payload: OptimizationRequestPayload): OptimizationSolution {
   const startTime = Date.now();
@@ -233,7 +231,7 @@ export function solveRelocationMip(payload: OptimizationRequestPayload): Optimiz
     isFeasible,
     assignments,
     unassignedHabitations,
-    solverEngine: 'Deterministic Mixed-Integer CP-SAT Solver v2.4 (Branch-and-Bound)',
+    solverEngine: 'Priority-Weighted Greedy Allocation Heuristic v1 (Phase-2 MILP Target)',
     solveTimeMs,
     distanceFallbackUsed: Boolean(isRelaxedFallback),
     bindingConstraintsEncountered
