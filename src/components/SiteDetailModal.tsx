@@ -30,7 +30,7 @@ export const SiteDetailModal: React.FC<SiteDetailModalProps> = ({
   const assignedHabs = allHabitations.filter(h => site.assignedHabitations.includes(h.id));
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs animate-fadeIn">
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs animate-fadeIn">
       <div 
         id="relocation-site-detailed-dialog"
         className="relative w-full max-w-2xl bg-white border border-slate-200 rounded-2xl shadow-2xl overflow-hidden text-slate-900"

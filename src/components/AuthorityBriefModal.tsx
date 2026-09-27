@@ -32,7 +32,7 @@ export const AuthorityBriefModal: React.FC<AuthorityBriefModalProps> = ({
   const relocatedHabs = habitations.filter(h => h.status === 'Relocated');
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-sm animate-fadeIn">
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-sm animate-fadeIn">
       <div 
         id="authority-executive-brief-dialog"
         className="relative w-full max-w-3xl bg-white text-slate-900 rounded-2xl shadow-2xl overflow-hidden font-sans border border-slate-300"
