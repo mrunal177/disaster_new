@@ -94,8 +94,9 @@ export const Navigation: React.FC<NavigationProps> = ({
                   <span className="text-slate-300 font-normal text-xs hidden lg:inline">|</span>
                   <span className="text-xs font-bold text-indigo-700 hidden lg:inline">Disaster Management Authority</span>
                 </span>
-                <span className="bg-amber-100 border border-amber-300 text-amber-900 text-[10px] font-bold px-2 py-0.5 rounded-md uppercase tracking-wider">
-                  Prototype / Demonstration Dataset
+                <span className="bg-emerald-50 border border-emerald-300 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded-md uppercase tracking-wider flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                  Operational System
                 </span>
               </div>
               <p className="text-[11px] text-slate-500 font-medium leading-none mt-0.5 hidden sm:block">

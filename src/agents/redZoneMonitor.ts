@@ -245,7 +245,7 @@ export class RedZoneMonitor {
   }
 
   /**
-   * Manually trigger a spike for testing or live demonstrations
+   * Manually trigger a spike for operational testing or alert simulation
    */
   public triggerSpike(
     habitationId: string, 

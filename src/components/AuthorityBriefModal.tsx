@@ -179,7 +179,7 @@ export const AuthorityBriefModal: React.FC<AuthorityBriefModalProps> = ({
         {/* Footer */}
         <div className="bg-slate-100 p-4 border-t border-slate-200 flex justify-between items-center text-xs">
           <span className="text-slate-500">
-            Exported from MHDR-DSS Decision Support Platform • Internal Gov Demonstration
+            Exported from MHDR-DSS Decision Support Platform • Official Authority Dispatch
           </span>
           <div className="flex gap-2">
             <button

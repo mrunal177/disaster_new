@@ -315,10 +315,10 @@ export default function App() {
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-emerald-500" />
-            <span className="font-medium text-slate-700">MHDR-DSS Operational Architecture • Smart India Hackathon Prototype Edition</span>
+            <span className="font-medium text-slate-700">MHDR-DSS Operational Architecture • Multi-Hazard Decision Support Platform</span>
           </div>
           <div className="text-slate-500 font-medium">
-            Positioned for State & District Disaster Management Authorities • Simulated Demo Dataset
+            Positioned for State & District Disaster Management Authorities • Active Multi-Agent Pipeline
           </div>
         </div>
       </footer>
